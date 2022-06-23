@@ -63,3 +63,7 @@ $duvel = new Beer("biercleur", 3.50, "Duvel", 8.5);
 echo $duvel->getAlcoholPercentage(); // using the class method, which contains a method with return ($ITEM->METHOD)
 echo "</br>";
 echo $duvel->alcoholPercentage;  // access the PROPERTY ($ITEM->PROPERTY)
+echo "</br>";
+echo $duvel->color;
+echo "</br>";
+$duvel->getInfo();
