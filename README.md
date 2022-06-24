@@ -27,3 +27,7 @@ Access Modifiers:
 
 Exercise 5
 How to use an if statement within a setter, this was used to stop the posibility of a negative value
+
+
+
+All exercises have been heavily & relevantly commented for future reference :)
