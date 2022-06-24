@@ -23,7 +23,7 @@ class Beverage
     // The Properties
     private string $color; //type declaration to "string"
     private float $price;
-    private string $temperature; //= "cold";  //this is to set a default /// wrong way!!!
+    private string $temperature;
 
 
     // The Constructor with incoming parameters in the brackets
@@ -103,7 +103,7 @@ class Beer extends Beverage
         echo $this->getAlcoholPercentage();
         echo " and I have a ";
         echo $this->getColor();
-        echo "color.";
+        echo " color.";
         // "Hi i'm Duvel and have an alcochol percentage of 8.5 and I have a light color."
     }
 
@@ -182,4 +182,5 @@ echo "</br>";
 $duvel->printInfo();
 echo "</br>";
 $duvel->getBeerInfo();
+
 ?>

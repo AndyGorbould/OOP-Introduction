@@ -24,7 +24,7 @@ class Beverage
     public float $price;
     public string $temperature;
     // The Constructor with incoming parameters in the brackets
-    public function __construct($color, $price)
+    public function __construct(string $color, float $price)
     {
         // in a sentence it would be: "set this class's properties with the same value as the incoming parameters"
         $this->color = $color;
