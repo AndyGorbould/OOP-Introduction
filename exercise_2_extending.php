@@ -8,11 +8,11 @@ class Beverage
 {
 
     // The Properties
-    private string $color; //type declaration to "string"
-    private float $price;
-    private string $temperature = "cold";  //this is to set a default
+    public string $color; //type declaration to "string"
+    public float $price;
+    public string $temperature = "cold";  //this is to set a default
     // The Constructor with incoming parameters in the brackets
-    private function __construct($color, $price, $temperature)
+    public function __construct($color, $price, $temperature)
     {
         // in a sentence it would be: "set this class's properties with the same value as the incoming parameters"
         $this->color = $color;
@@ -21,7 +21,7 @@ class Beverage
     }
 
     // The functions
-    private function getInfo(): void
+    public function getInfo(): void
     {
         echo "This beverage is $this->color and $this->temperature";
     }
@@ -37,11 +37,11 @@ $riverCola = new Beverage("black", 0.65, "cold");
 
 class Beer extends Beverage
 {
-    private string $name;
-    private float $alcoholPercentage;
+    public string $name;
+    public float $alcoholPercentage;
 
     // Constructor
-    private function __construct(string $color, float $price, string $name, float $alcoholPercentage)
+    public function __construct(string $color, float $price, string $name, float $alcoholPercentage)
 
     {
         $this->color = $color;
@@ -50,7 +50,7 @@ class Beer extends Beverage
         $this->alcoholPercentage = $alcoholPercentage;
     }
     // The functions
-    private function getAlcoholPercentage(): float
+    public function getAlcoholPercentage(): float
     {
         // $this->alcoholPercentage = $catchMe;
         return $this->alcoholPercentage;
@@ -67,3 +67,4 @@ echo "</br>";
 echo $duvel->color;
 echo "</br>";
 $duvel->getInfo();
+?>

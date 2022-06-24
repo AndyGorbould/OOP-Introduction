@@ -182,3 +182,4 @@ echo "</br>";
 $duvel->printInfo();
 echo "</br>";
 $duvel->getBeerInfo();
+?>

@@ -5,13 +5,13 @@ declare(strict_types=1); // <<< DON'T FORGET THIS :D
 class Beverage {
 
     // The Properties
-private string $color; //type declaration to "string"
-private float $price;
-private string $temperature = "cold";  //this is to set a default
+public string $color; //type declaration to "string"
+public float $price;
+public string $temperature = "cold";  //this is to set a default
 
     // The Constructor with incoming parameters in the brackets
     
-    private function __construct($color, $price, $temperature)
+    public function __construct($color, $price, $temperature)
     
     {
     // in a sentence it would be: "set this class's properties with the same value as the incoming parameters"
@@ -21,7 +21,7 @@ private string $temperature = "cold";  //this is to set a default
     }
 
     // The functions
-    private function getInfo() : void
+    public function getInfo() : void
     {
         echo "This beverage is $this->color and $this->temperature";
     }
