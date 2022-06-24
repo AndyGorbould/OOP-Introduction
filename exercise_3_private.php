@@ -95,7 +95,7 @@ class Beer extends Beverage
         $this->alcoholPercentage = $alcoholPercentage;
     }
 
-    private function beerInfo(): void
+    public function beerInfo(): void
     {
         echo "Hi, I'm ";
         echo $this->getName();
