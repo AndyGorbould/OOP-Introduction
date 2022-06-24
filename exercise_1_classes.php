@@ -40,7 +40,7 @@ public string $temperature;  //this is to set a default
 }
 
 $sprite = new beverage("yellow", 1.40);
-$cola = new beverage("black", 2);
+$cola = new beverage("black", 2); 
 $pepsi = new beverage("black", 1.80);
 $freewayCola = new beverage("black", 0.65);
 $riverCola = new beverage("black", 0.65);
