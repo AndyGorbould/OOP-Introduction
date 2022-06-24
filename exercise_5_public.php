@@ -18,17 +18,17 @@ class Beverage {
     // The Properties
 private string $color; //type declaration to "string"
 private float $price;
-private string $temperature = "cold";  //this is to set a default
+private string $temperature;  //this is to set a default
 
     // The Constructor with incoming parameters in the brackets
     
-    public function __construct($color, $price, $temperature)
+    public function __construct($color, $price)
     
     {
     // in a sentence it would be: "set this class's properties with the same value as the incoming parameters"
     $this->color = $color;
     $this->price = $price;
-    $this->temperature = $temperature;
+    $this->temperature = "cold";
     }
 
     // The functions
@@ -54,11 +54,11 @@ private string $temperature = "cold";  //this is to set a default
 
 }
 
-$sprite = new beverage("yellow", 1.40, "cold");
-$cola = new beverage("black", 2, "cold");
-$pepsi = new beverage("black", 1.80, "cold");
-$freewayCola = new beverage("black", 0.65, "cold");
-$riverCola = new beverage("black", 0.65, "cold");
+$sprite = new beverage("yellow", 1.40);
+$cola = new beverage("black", 2);
+$pepsi = new beverage("black", 1.80);
+$freewayCola = new beverage("black", 0.65);
+$riverCola = new beverage("black", 0.65);       // how do I get the default value by not declaring it here?
 
 $cola->getInfo();
 //________________________________________________
