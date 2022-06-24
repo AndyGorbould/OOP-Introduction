@@ -1,6 +1,5 @@
 <?php
 
-declare(strict_types=1);
 
 /* EXERCISE 4
 
@@ -13,8 +12,6 @@ USE TYPEHINTING EVERYWHERE!
 */
 
 
-<?php
-
 declare(strict_types=1); // <<< DON'T FORGET THIS :D
 
 
@@ -23,9 +20,9 @@ class Beverage
 {
 
     // The Properties
-    public string $color; //type declaration to "string"
-    public float $price;
-    public string $temperature = "cold";  //this is to set a default
+    protected string $color; //type declaration to "string"
+    protected float $price;
+    protected string $temperature = "cold";  //this is to set a default
     // The Constructor with incoming parameters in the brackets
     public function __construct($color, $price, $temperature)
     {
@@ -52,8 +49,8 @@ $riverCola = new Beverage("black", 0.65, "cold");
 
 class Beer extends Beverage
 {
-    public string $name;
-    public float $alcoholPercentage;
+    protected string $name;
+    protected float $alcoholPercentage;
 
     // Constructor
     public function __construct(string $color, float $price, string $name, float $alcoholPercentage)
@@ -70,6 +67,14 @@ class Beer extends Beverage
         // $this->alcoholPercentage = $catchMe;
         return $this->alcoholPercentage;
     }
+    public function getColor(): string
+    {
+        // $this->alcoholPercentage = $catchMe;
+        return $this->color;
+    }
+
+
+
 
 }
 $cara = new Beer("yellowish", 0.60, "Carapils", 4.4);
@@ -77,9 +82,7 @@ $duvel = new Beer("biercleur", 3.50, "Duvel", 8.5);
 
 echo $duvel->getAlcoholPercentage(); // using the class method, which contains a method with return ($ITEM->METHOD)
 echo "</br>";
-echo $duvel->alcoholPercentage;  // access the PROPERTY ($ITEM->PROPERTY)
-echo "</br>";
-echo $duvel->color;
+echo $duvel->getColor();
 echo "</br>";
 $duvel->getInfo();
 ?>
